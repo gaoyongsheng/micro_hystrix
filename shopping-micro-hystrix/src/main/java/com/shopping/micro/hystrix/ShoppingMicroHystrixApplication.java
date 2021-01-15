@@ -8,15 +8,12 @@ import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.netflix.turbine.EnableTurbine;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-//@EnableEurekaClient
-//@EnableFeignClients
 @EnableHystrixDashboard    //开启服务发现客户端
-@EnableTurbine
-//@EnableCircuitBreaker      //开启断路器功能
+//@EnableTurbine
+@EnableEurekaClient
 public class ShoppingMicroHystrixApplication {
 
     public static void main(String[] args) {
